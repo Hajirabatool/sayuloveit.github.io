@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    #CCS for My Website
+\*------------------------------------*/
+
+html {
+  background: url(../imgs/inner-harbor.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Courier New, Courier, monospace
+}
+
+a {
+  color: white;
+  text-align: center;
+}
+
+nav {
+  color: white;
+  text-align: -webkit-center;
+  width: 100%;
+  text-align: right
+}
+
+nav h5 {
+  padding: 5px 18px;
+  display: inline-block;
+}
+
+div.pic img {
+  float: left;
+  border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+  margin-left: 2vw;
+  margin-top: -2vw
+}
+
+div.col-title {
+  font-family: cursive;
+  color: white;
+  text-align: -webkit-center;
+  font-size: 30px;
+  position: inherit;
+  width: 75%;
+  float: right;
+  border-radius: 10px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+div.col-about {
+  color: white;
+  width: 75%;
+  float: right;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: Center;
+}
+
+p {
+  font-size: 18px;
+  margin: 0vw 15vw
+}
+
+div.row-social {
+  width: 22%;
+  display: inline-block;
+  position: absolute;
+  left: 80vw;
+  top: 45vw;
+}
+
