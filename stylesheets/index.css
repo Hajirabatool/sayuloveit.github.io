@@ -37,28 +37,7 @@ div.pic img {
   margin-top: -2vw
 }
 
-div.col-title {
-  font-family: cursive;
-  color: white;
-  text-align: -webkit-center;
-  font-size: 30px;
-  position: inherit;
-  width: 75%;
-  float: right;
-  border-radius: 10px;
-}
-
-h1 {
-  display: block;
-  font-size: 2em;
-  -webkit-margin-before: 0.67em;
-  -webkit-margin-after: 0.67em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  font-weight: bold;
-}
-
-div.col-about {
+div.intro {
   color: white;
   width: 75%;
   float: right;
@@ -74,7 +53,7 @@ p {
   margin: 0vw 15vw
 }
 
-div.row-social {
+div.social-row {
   width: 22%;
   display: inline-block;
   position: absolute;
