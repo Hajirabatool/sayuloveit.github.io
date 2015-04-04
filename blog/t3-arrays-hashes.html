@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+  <header>
+    <h3><span class="big">A</span>rrays or <span class="Big">H</span>ashes </h3>
+    <span class="medium">Hashes in, Arrays out</span>
+    </br><span class="date">2015-04-03</span>
+    <hr>
+  </header>
+
+  <div>
+
+  </div>
+
+    <hr>
+
+    <div>
+      <div></div>
+      <div>
+        <p>Points of this Blog</p>
+
+        <p>
+          - What is an Array?</br>
+          - What is a Hash?</br>
+          - When to use Array or Hash?<br>
+          <br>
+        </p>
+
+        <p>
+          An Array in Ruby is simpley a ordered indexed collections of of any objects. Arrays can be a collection of numbers, strings, or even Arrays! An Array is indexed by numbers. The first element in an Array starts with 0, then 1, the so on. We can grab elements we want out of the Array using this numbers index:
+          <pre><code>
+          irb(main):004:0> my_array = [1, "two", [3, "Fake Street"]]
+          => [1, "two", [3, "Fake Street"]]
+          irb(main):005:0> puts my_array[0]
+          1
+          </code></pre>
+        </p>
+
+        <p>
+          A Hashes in Ruby is a collection of key-value pairs. A Hash is also indexed, but the indexing can be done by any keys of any object type. The syntax for grabbing elements out of a Hash is similar to grabbing an element out of an Array.
+          <pre><code>
+          irb(main):003:0> my_hash = { "mario" => "red", "luigi" => "bad" }
+          => {"mario"=>"red", "luigi"=>"bad"}
+          irb(main):004:0> my_hash["luigi"]
+          => "bad"
+          </code></pre>
+        </p>
+
+        <p>
+          Even though Arrays and Hashes both store an index collection of elements, Hashes seem like a better way to store them. The indexing of Hashes makes it much easier for you to find an specific element. In Arrays, you have to know exactly where the element is positioned within the Array to grab it, but that element may not be in the same position everytime, resulting in retrieving the wrong element. Although you can order the elements in Arrays to make the positions consistant, doing so would require some knowledge of what is in the Array already. Hashes, on the otherhand, just requires you knowing the key to the element you want to retrieve.
+        </p>
+      </div>
+      <div></div>
+    </div>
+
+    </section>
+</body>
+
