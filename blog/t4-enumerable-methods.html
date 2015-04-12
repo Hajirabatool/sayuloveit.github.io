@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+  <header>
+    <h3><span class="big">E</span>numerable <span class="big">M</span>ethods </h3>
+    <span class="medium">Enumerable#map</span>
+    </br><span class="date">2015-04-12</span>
+    <hr>
+  </header>
+
+  <div>
+
+  </div>
+
+    <hr>
+
+    <div>
+      <div></div>
+      <div>
+        <p>Points of this Blog</p>
+
+        <p>
+          - What are enumerables</br>
+          - Map enumerable method </br>
+          - More methods<br>
+          <br>
+        </p>
+
+        <p>
+          Enumerable in Ruby is a module of useful methods that makes a Ruby programmer's life happy. There are many methods in the <a href="http://ruby-doc.org/core-2.1.0/Enumerable.html">Enumerable Module</a>. Each of those methods traverses a collection and do some pretty sweet things. For this post, I'll focus on the map method within the Enumerable module.
+        </p>
+
+        <p>
+          enum.map { |obj| block } → array, the map method returns a new Array with the result of running the block once for every element in the enumerable. For example: <br>
+          <pre><code>
+          irb(main):001:0> my_array = [1, 2, 3, 4]
+          => [1, 2, 3, 4]
+          irb(main):002:0> my_array.map { |el| el + 1 }
+          => [2, 3, 4, 5]
+          </code></pre>
+        </p>
+
+        <p>
+          The map method can also selectively modify elements in an enumerable by adding a condition in the block. For example:
+          <pre><code>
+          irb(main):004:0> my_array.map { |el| if el % 2 == 0 then el + 10 else el end }
+          => [1, 12, 3, 14]
+          </code></pre>
+        </p>
+
+        <p>
+          The enumerable module provides powerful and elegant methods to transform collections. Not only do those methods provide easy ways for the developer to manipulate collections, they also make the code very readable. Some of my other favorite methods from the enumerable methods are inject, partition, and group_by, be sure to check them out on the <a href="http://ruby-doc.org/core-2.1.0/Enumerable.html">Ruby docs</a>.
+        </p>
+      </div>
+      <div></div>
+    </div>
+
+    </section>
+</body>
+
