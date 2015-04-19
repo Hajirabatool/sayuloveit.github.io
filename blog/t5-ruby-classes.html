@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+  <header>
+    <h3><span class="big">R</span>uby <span class="big">C</span>lasses </h3>
+    <span class="medium">Keeping it Classy</span>
+    </br><span class="date">2015-04-19</span>
+    <hr>
+  </header>
+
+  <div>
+
+  </div>
+
+    <hr>
+
+    <div>
+      <div></div>
+      <div>
+        <p>Points of this Blog</p>
+
+        <p>
+          - Explain when, why, and how to use classes</br>
+          - Explain how data structures and classes can model a real-world object</br>
+          <br>
+        </p>
+
+        <p>
+          Classes are like blue prints for new objects you want to create. If I wanted to make a host of objects with similar properties, creating a Class with the desired properties is the way to go. Creating a Class in Ruby is simple, the syntax is:
+        </p>
+          <pre><code>
+          def MyClass
+          end
+          </code></pre>
+
+         <p>
+          A Class will usually have methods that lets you interact with objects created by the class.
+         </p>
+
+          <pre><code>
+          def MyClass
+
+            def greeting
+              puts "Hello!"
+            end
+
+          end
+          </code></pre>
+
+          <p>
+            In the example above, any object created from the "MyClass" class will have a greeting method that will print out "Hello!" when called.
+          </p>
+
+        <p>
+          Classes can be used to model real-world objects, I have created a Car class below to model cars.
+        </p>
+        <pre><code>
+        def Cars
+
+          def initialize(aName)
+            @name = aName
+          end
+
+          def start
+            puts "The car grumbled to life."
+          end
+
+          def move
+            puts "The car roars forward."
+          end
+
+          def stop
+            puts "The car screeches to a halt"
+          end
+
+        end
+        </code></pre>
+
+        <p>
+          To create a car using the above class, simple run:
+        </p>
+        <pre><code>
+        car = Cars.new("Marge")
+        </code></pre>
+
+        <p>
+          As you can see, the car created from the Car class above can start, move, and stop. The car will each also have the name "Marge" (because what car doesn't have a name?).
+        </p>
+
+        <p>
+          Now that we have a basic blue print of a car, how will we model different types of cars? Sure, all cars start, move, and stop (at least I hope they can), but what about electric cars or gasoline cars? This is where subclasses come in. Instead of creating more classes called "ElectricCars" and "GasolineCars" with the same start, move, stop methods, we can simply make subclasses.
+        </p>
+
+        <pre><code>
+        def GasolineCars < Cars
+
+          def power_source
+            puts "Gas"
+          end
+
+        end
+
+        def ElectricCars < Cars
+
+          def power_source
+            puts "Electric"
+          end
+
+        end
+        </code></pre>
+
+        <p>
+          The "ElectricCars" and "GasolineCars" classes will have the same start, move, stop methods as the "Cars" method. The "ElectricCars" and "GasolineCars" will also have a new method "power_source". Although you can create as many methods as you want within a single class, it is good practice to keep each class serving a specific function. You can always create subclasses to add specific functionalities.
+        </p>
+
+      </div>
+      <div></div>
+    </div>
+
+    </section>
+</body>
+
