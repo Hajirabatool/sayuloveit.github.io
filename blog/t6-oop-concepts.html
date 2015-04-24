@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+  <header>
+    <h3><span class="big">B</span>locs, <span class="big">P</span>rocs, and <span class="Big">L</span>ambdas </h3>
+    <span class="medium">{blocs}, Proc.new{procs}, lambda {lambdas} </span>
+    </br><span class="date">2015-04-22</span>
+    <hr>
+  </header>
+
+  <div>
+
+  </div>
+
+    <hr>
+
+    <div>
+      <div></div>
+      <div>
+        <p>Points of this Blog</p>
+
+        <p>
+          - What are Blocs, Procs, and Lambdas?</br>
+          - Comparisons</br>
+          - Closing<br>
+          <br>
+        </p>
+
+        <p>
+          Blocs in Ruby are just bits of code to be executed. The syntex for a bloc is either as curley brackets or do..end notations. For example:
+        </p>
+          <pre><code>
+          [1, 2, 3].each { |num| puts num }     # bloc contained between {}
+
+          [1, 2, 3].each do |num|               # bloc contained between "do" and "end"
+            puts num
+          end
+          </code></pre>
+
+        <p>
+          Procs in Ruby are blocs that have been bound to a variable. Procs can then be used as objects to use that block of code elsewhere in the code. For example:
+        </p>
+          <pre><code>
+          proc = Proc.new { |num| puts num }     # assigns proc variable as { |num| puts num } bloc
+          [1, 2, 3].each(&proc)                  # "&" to turn the Proc into a bloc
+          </code></pre>
+        <p>
+          Lambdas in Ruby are also blocks that have been bound to a variable. Like Procs, Lambdas can also be used as objects for reuse later. For example:
+        </p>
+          <pre><code>
+          lam = lambda { |num| puts num }     # assigns lam variable as { |num| puts num } bloc
+          [1, 2, 3].each(&lam)                # "&" to turn the Lambda into a bloc
+          </code></pre>
+
+          <p>
+            As you can see from the above examples, Procs and Lambdas are ways to store and reuse Blocks. While Procs and Lambdas are very similar (in fact, they are both Proc objects), they do have a few differences. First, Procs do not care about the number of arguments required by the Bloc, but Lambdas do.
+          </p>
+
+          <pre><code>
+            irb(main):006:0>  proc = Proc.new { |num| puts num }
+            => #<Proc:0x007fc3538c2ff8@(irb):6>
+            irb(main):007:0> proc.call(1)
+            1
+            => nil
+            irb(main):008:0> proc.call(1,2)
+            1
+            => nil
+          </code></pre>
+
+          <p>
+            Procs ignore extra arguments.
+          </p>
+
+
+          <pre><code>
+            irb(main):003:0> lam = lambda { |num| puts num }
+            => #<Proc:0x007fc353152ae8@(irb):3 (lambda)>
+            irb(main):004:0> lam.call(1)
+            1
+            => nil
+            irb(main):005:0> lam.call(1,2)
+            ArgumentError: wrong number of arguments (2 for 1)
+              from (irb):3:in `block in irb_binding'
+              from (irb):5:in `call'
+              from (irb):5
+              from /Users/vic/.rbenv/versions/2.2.1/bin/irb:11:in `<main>'
+          </code></pre>
+
+          <p>
+            Lambdas cry about extra arguments.
+          </p>
+
+          <p>
+            Another difference between Procs and Lambdas is the way they handle the "return" keyword. "return" in Procs will return from both the Bloc and the calling method while in Lambdas will return from only the Bloc. This means that Lambdas are more useful since they can be used to return values that the method can continue using.
+          </p>
+
+      </div>
+      <div></div>
+    </div>
+
+    </section>
+</body>
+
