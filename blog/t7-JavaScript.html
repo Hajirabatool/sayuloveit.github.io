@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+  <header>
+    <h3><span class="big">C</span>lasses in <span class="big">R</span>uby and <span class="big">J</span>ava<span class="big">S</span>cript</h3>
+    <span class="medium"> Making Classes in Ruby versus Making Classes in JavaScript </span>
+    </br><span class="date">2015-05-01</span>
+    <hr>
+  </header>
+
+  <div>
+
+  </div>
+
+    <hr>
+
+    <div>
+      <div></div>
+      <div>
+        <p>Points of this Blog</p>
+
+        <p>
+          - Class making in Ruby</br>
+          - Class making in JavaScript</br>
+          - Comparison<br>
+          <br>
+        </p>
+
+        <p>
+          Making classes in Ruby goes like the following:
+        </p>
+        <pre><code>
+        class Person
+          attr_accessor :first_name, :last_name
+
+          def initialize(first_name, last_name)
+            @first_name = first_name
+            @last_name = last_name
+          end
+
+          def full_name
+            @first_name + " " + @last_name
+          end
+        end
+        </code></pre>
+
+        <p>
+          Making the above equivalent in JavaScript goes like the following:
+        </p>
+
+        <pre><code>
+        function Person(first_name, last_name) {
+          this.first_name = first_name
+          this.last_name = last_name
+
+          this.full_name = function() {
+            return this.first_name + ' ' + this.last_name
+          }
+        }
+        </code></pre>
+
+        <p>
+          Both of versions of "Person" will need two arguments (first name and last name)to instantiate a new object. Both have a "full_name" method where the first and last name will be returned. As you can see the "function" syntex of JavaScript works like "def" in Ruby, and the "this" keyword in JavaScript is the equivalent to the "self" keyword in Ruby. Having just started learning JavaScript this week, the only differences I'm seeing so far has been syntax. I'm sure as I dive deeper into both, I'll begin to notice the differences in how the two languages work under the hood.
+        </p>
+
+      </div>
+      <div></div>
+    </div>
+
+    </section>
+</body>
+
